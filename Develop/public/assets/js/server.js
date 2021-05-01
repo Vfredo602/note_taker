@@ -1,12 +1,12 @@
 const http = require('http');
 const PORT = 8080;
 
-const handleRequest1 = (request, response) => {
+const handleRequest = (request, response) => {
     response.end(`It Works!! Path Hit: ${request.url}`);
 };
 
-const server = http.createServer(handleRequest1);
+const server = http.createServer(handleRequest);
 
-server.listen(PORT1, () => {
-    console.log(`Server listening on: http://localhost:${PORT1}`);
+server.listen(PORT, () => {
+    console.log(`Server listening on: http://localhost:${PORT}`);
 });
