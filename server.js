@@ -6,15 +6,18 @@ const html = require('./routes/htmlRoutes');
 const app = express();
 const PORT = 8080;
 
+// middleware parsing into json
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'))
 // routes
 app.use('/api', api);
 app.use('/', html);
-
 // const server = http.createServer(handleRequest);
 
 server.listen(PORT, () => {
     console.log(`Server listening on: http://localhost:${PORT}`);
 });
+
+// javascript classes for tonight..
+// 
