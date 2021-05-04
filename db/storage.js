@@ -16,6 +16,21 @@ class Storage {
   writeFile(note) {
       return writeAsync("db/db.json", JSON.stringify(note));
   }
+
+readNote(){
+// finish
+}  
+
+writeNote(note) {
+    // making sure we are setting note parameter as object for title and textua
+    const {title, text} = note;
+    const newNote = {title, text, id:uuid()}
+// creating new notes, updating new notes, passing in the new notes
+    return this.readNote()
+    .then(notes => [...notes, newNote])
+    .then(updatedNotes => this.writeFile(updatedNotes))
+    .then(() => newNote)
+}
 }
 
 
