@@ -15,9 +15,7 @@ app.use('/api', api);
 app.use('/', html);
 // const server = http.createServer(handleRequest);
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log(`Server listening on: http://localhost:${PORT}`);
 });
 
-// javascript classes for tonight..
-// 

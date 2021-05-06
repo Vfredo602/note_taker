@@ -8,6 +8,10 @@ router.post("/notes", (req, res) => {
     .catch((error) =>res.json(error))
 })
 
-// router.get()finish
+router.get("/notes", (req, res) => {
+    storage.readNote(req.body)
+    .then((note) => res.json(note))
+    .catch((error) =>res.json(error))
+});
 
 module.exports = router;
